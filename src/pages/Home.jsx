@@ -16,9 +16,11 @@ export default function Home() {
   });
 
   return (
-    <>
-      <Navbar userData={userData} setUserData={setUserData} />
-      <MultiStepForm />
-    </>
+    <div className="flex flex-col items-center">
+      <Navbar />
+      <main className="mt-25"> {/*margin top is to push the main content below the navbar*/}
+        <MultiStepForm userData={userData} setUserData={setUserData} />
+      </main>
+    </div>
   );
 }
