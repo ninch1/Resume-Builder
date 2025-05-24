@@ -7,6 +7,7 @@ export default function InputForm({ userData, setUserData }) {
 
     return (
         <div className="flex flex-col items-center">
+            {/* Step switching*/}
             <div className="flex gap-5 justify-center items-center mb-3">
                 {step > 1 && <button onClick={() => setStep((prevStep) => prevStep - 1)}>
                     <img src={ArrowImg} className="w-5 rotate-180" />
@@ -18,6 +19,8 @@ export default function InputForm({ userData, setUserData }) {
                     <img src={ArrowImg} className="w-5" />
                 </button> }
             </div>
+
+            {/* Step content */}
             {step === 1 && <StepOne userData={userData} setUserData={setUserData} />}
         </div>
     )

@@ -1,5 +1,4 @@
 export default function StepOne({ userData, setUserData}) {
-    console.log("StepOne", userData);
     return (
         <fieldset className="min-w-75 flex flex-col gap-2 items-center justify-center border border-gray-400 p-4 rounded-xl">
             <legend className="text-center px-2">Personal Info</legend>
