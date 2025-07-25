@@ -5,7 +5,8 @@ import ResumePreview from '../components/ResumePreview';
 
 export default function Home() {
   const [userData, setUserData] = useState({
-    personalInfo: {
+    personalInfo:
+    {
       name: "", // mandatory
       profession: "",
       location: "", // mandatory
@@ -16,15 +17,18 @@ export default function Home() {
       skills: [],
     },
     
-    schoolInfo: {
+    schoolInfo:
+    {
       schoolName: "",
       degree: "",
-      schoolStart: -1,
-      schoolEnd: -1,
-      schoolDescription: "",
+      startDate: null,
+      endDate: null,
+      isCurrent: false,
     },
-    experience: [],
-    projects: [],
+    experience:
+    {
+
+    },
   });
 
   return (

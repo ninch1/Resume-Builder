@@ -11,7 +11,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="Elguja Modebadze"
                 value={userData.name}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, name: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, name: e.target.value } }))}
             />
 
             <label htmlFor="profession" className="">Profession</label>
@@ -22,7 +22,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="Frontend Developer"
                 value={userData.profession}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, profession: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, profession: e.target.value } }))}
             />
 
             <label htmlFor="location" className="">Location</label>
@@ -33,7 +33,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="Tbilisi, Georgia"
                 value={userData.location}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, location: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, location: e.target.value } }))}
             />
 
             <label htmlFor="email" className="">Email</label>
@@ -44,7 +44,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="emodebadze9108@sdsu.edu"
                 value={userData.email}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, email: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, email: e.target.value } }))}
             />
 
             <label htmlFor="phone" className="">Phone Number</label>
@@ -55,7 +55,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="+995 599 99 99 99"
                 value={userData.phone}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, phone: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, phone: e.target.value } }))}
             />
 
             <label htmlFor="linkedin" className="">LinkedIn URL</label>
@@ -66,7 +66,7 @@ export default function StepOne({ userData, setUserData}) {
                 className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
                 placeholder="https://linkedin.com/in/yourname"
                 value={userData.linkedin}
-                onChange={(e) => setUserData((prevData) => ({ ...prevData, linkedin: e.target.value }))}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, linkedin: e.target.value } }))}
             />
         </fieldset>
     )
