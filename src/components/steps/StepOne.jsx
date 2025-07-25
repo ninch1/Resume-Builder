@@ -14,6 +14,28 @@ export default function StepOne({ userData, setUserData}) {
                 onChange={(e) => setUserData((prevData) => ({ ...prevData, name: e.target.value }))}
             />
 
+            <label htmlFor="profession" className="">Profession</label>
+            <input
+                type="text"
+                id="profession"
+                name="profession"
+                className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
+                placeholder="Frontend Developer"
+                value={userData.profession}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, profession: e.target.value }))}
+            />
+
+            <label htmlFor="location" className="">Location</label>
+            <input
+                type="text"
+                id="location"
+                name="location"
+                className="w-full border-none bg-input rounded-2xl py-2 px-2 mb-4"
+                placeholder="Tbilisi, Georgia"
+                value={userData.location}
+                onChange={(e) => setUserData((prevData) => ({ ...prevData, location: e.target.value }))}
+            />
+
             <label htmlFor="email" className="">Email</label>
             <input
                 type="email"

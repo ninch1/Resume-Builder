@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import StepOne from './steps/StepOne';
 import ArrowImg from '../assets/arrow.png';
+import StepOne from './steps/StepOne';
+import StepTwo from './steps/StepTwo';
 
 export default function InputForm({ userData, setUserData }) {
     const [step, setStep] = useState(1);
@@ -22,6 +23,7 @@ export default function InputForm({ userData, setUserData }) {
 
             {/* Step content */}
             {step === 1 && <StepOne userData={userData} setUserData={setUserData} />}
+            {step === 2 && <StepTwo userData={userData} setUserData={setUserData} />}
         </div>
     )
 }
