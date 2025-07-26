@@ -27,7 +27,11 @@ export default function Home() {
     },
     experience:
     {
-
+      company: "",
+      jobTitle: "",
+      startDate: null,
+      endDate: null,
+      isCurrent: false,
     },
   });
 

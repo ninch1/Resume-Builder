@@ -1,3 +1,5 @@
+import Skills from "./Skills"
+
 export default function StepOne({ userData, setUserData}) {
     return (
         <fieldset className="min-w-75 flex flex-col gap-2 items-center justify-center border border-gray-400 p-4 rounded-xl">
@@ -68,6 +70,8 @@ export default function StepOne({ userData, setUserData}) {
                 value={userData.linkedin}
                 onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, linkedin: e.target.value } }))}
             />
+
+            <Skills />
         </fieldset>
     )
 }
