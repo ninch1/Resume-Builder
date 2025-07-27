@@ -1,7 +1,6 @@
 import DatePicker from "react-datepicker";
 
 export default function StepTwo({ userData, setUserData}) {
-    console.log(userData.schoolInfo)
     return (
         <fieldset className="min-w-75 flex flex-col gap-2 items-center justify-center border border-gray-400 p-4 rounded-xl">
             <legend className="text-center px-2">Education</legend>

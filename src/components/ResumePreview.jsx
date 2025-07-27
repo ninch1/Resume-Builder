@@ -34,7 +34,38 @@ export default function ResumePreview({ userData }) {
                             </div>
                         </div>
                     </div>
-                    <div></div>
+                    <div className="pl-5">
+                        <h2 className="font-semibold text-2xl border-b-3 w-fit mb-5">EDUCATION</h2>   
+
+                        <h3 className="font-semibold text-xl">SCHOOL</h3>
+                        <h3 className="text-xl mb-5">{userData.schoolInfo.schoolName || "San Diego State University"}</h3>
+
+                        <h3 className="font-semibold text-xl">DEGREE</h3>
+                        <h3 className="text-xl mb-5">{userData.schoolInfo.degree || "Computer Engineering"}</h3>
+
+                        {userData.schoolInfo.startDate && (userData.schoolInfo.endDate || userData.schoolInfo.isCurrent) && (
+                        <div>
+                            <h3 className="font-semibold text-xl">DATE</h3>
+                            <div className="flex gap-5">
+                                <p className="text-xl mb-5">
+                                    {userData.schoolInfo.startDate.toLocaleString("default", {
+                                    month: "short",
+                                    year: "numeric",
+                                    })}
+                                </p>
+                                <span className="text-xl">-</span>
+                                <p className="text-xl mb-5">
+                                {userData.schoolInfo.isCurrent ? "Currently Studying" : (
+                                    userData.schoolInfo.endDate.toLocaleString("default", {
+                                    month: "short",
+                                    year: "numeric",
+                                    })
+                                )}
+                                </p>
+                            </div>
+                        </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
