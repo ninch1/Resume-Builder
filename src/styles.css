@@ -16,3 +16,19 @@ input {
 label {
     font-weight: 500;
 }
+
+.buttonShadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #EFEFEF;
+    cursor: pointer;
+}
+
+.listStyle {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #EFEFEF;
+    cursor: pointer;
+}
+
+.listStyle:hover {
+    background-color: #f87171;
+}

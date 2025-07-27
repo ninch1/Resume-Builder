@@ -71,7 +71,7 @@ export default function StepOne({ userData, setUserData}) {
                 onChange={(e) => setUserData((prevData) => ({ ...prevData, personalInfo: { ...prevData.personalInfo, linkedin: e.target.value } }))}
             />
 
-            <Skills />
+            <Skills userData={userData} setUserData={setUserData} />
         </fieldset>
     )
 }

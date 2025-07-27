@@ -27,7 +27,11 @@ export default function ResumePreview({ userData }) {
                         <Links userData={userData} />
                         <div className="mb-10"> {/*SKILLS */}
                             <h2 className="font-semibold text-2xl border-b-3 w-fit mb-5">SKILLS</h2>
-                            
+                            <div className="flex flex-col text-xl">
+                                {userData.personalInfo.skills.map((item) => (
+                                    <span key={item} className="">{item}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div></div>
