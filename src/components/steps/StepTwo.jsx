@@ -1,6 +1,21 @@
 import DatePicker from "react-datepicker";
 
 export default function StepTwo({ userData, setUserData}) {
+    function handleDesc(text) {
+        if (text.length > 700) {
+            alert("Maximum character limit is 700. Your input has been trimmed.");
+            text = text.slice(0, 700); // shorten the text to 700 characters
+        }
+
+        setUserData((prevData) => ({
+            ...prevData,
+            schoolInfo: {
+            ...prevData.schoolInfo,
+            description: text,
+            },
+        }));
+    }
+
     return (
         <fieldset className="min-w-75 flex flex-col gap-2 items-center justify-center border border-gray-400 p-4 rounded-xl">
             <legend className="text-center px-2">Education</legend>
@@ -76,6 +91,16 @@ export default function StepTwo({ userData, setUserData}) {
                 />
                 <label htmlFor="isCurrent">Currently studying here</label>
             </div>
+
+            <label htmlFor="description">Description</label>
+            <textarea
+            id="description"
+            name="description"
+            value={userData.schoolInfo.description}
+            onChange={(e) => handleDesc(e.target.value)}
+            rows={4}
+            className="w-full border rounded-xl p-2 resize-y"
+            />
         </fieldset>
     )
 }

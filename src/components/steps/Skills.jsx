@@ -56,7 +56,7 @@ export default function Skills({ userData, setUserData}) {
             </div>
             <ul className='flex flex-col gap-2 pt-5'>
                 {userData.personalInfo.skills.map((skill, index) => (
-                    <li key={index} className='rounded-xl p-2 listStyle'
+                    <li key={index} className='rounded-xl p-2 listStyle text-center'
                     onClick={(e) => removeSkill(e.target.innerText)}>{skill}</li>
                 ))}
             </ul>

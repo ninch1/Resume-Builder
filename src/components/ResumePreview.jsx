@@ -12,7 +12,7 @@ export default function ResumePreview({ userData }) {
 
                 <div className="flex">
                     <div className="border-r border-gray-300 pr-5">
-                        <div className="mb-10"> {/*DETAILS */}
+                        <div className="mb-10"> {/*personal info */}
                             <h2 className="font-semibold text-2xl border-b-3 w-fit mb-5">DETAILS</h2>
 
                             <h3 className="font-semibold text-xl">LOCATION</h3>
@@ -33,7 +33,7 @@ export default function ResumePreview({ userData }) {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </div> {/*education*/}
                     <div className="pl-5">
                         <h2 className="font-semibold text-2xl border-b-3 w-fit mb-5">EDUCATION</h2>   
 
@@ -65,7 +65,49 @@ export default function ResumePreview({ userData }) {
                             </div>
                         </div>
                         )}
+                        {userData.schoolInfo.description && <div>
+                            <h3 className="font-semibold text-xl">EDUCATION DESCRIPTION</h3>
+                            <p className="break-words max-w-sm">{userData.schoolInfo.description}</p>
+                        </div>}
                     </div>
+                </div>
+                <div className="flex gap-5 mt-3 pt-3 border-t border-gray-300"> {/*experience*/}
+                    <div>
+                        <h2 className="font-semibold text-2xl border-b-3 w-fit mb-5">EXPERIENCE</h2>  
+
+                        <h3 className="font-semibold text-xl">COMPANY</h3>
+                        <h3 className="text-xl mb-5">{userData.experience.company || "Google"}</h3>
+
+                        <h3 className="font-semibold text-xl">Job Title</h3>
+                        <h3 className="text-xl mb-5">{userData.experience.jobTitle || "Frontend Developer"}</h3>
+
+                        {userData.experience.startDate && (userData.experience.endDate || userData.experience.isCurrent) && (
+                        <div>
+                            <h3 className="font-semibold text-xl">DATE</h3>
+                            <div className="flex gap-5">
+                                <p className="text-xl mb-5">
+                                    {userData.experience.startDate.toLocaleString("default", {
+                                    month: "short",
+                                    year: "numeric",
+                                    })}
+                                </p>
+                                <span className="text-xl">-</span>
+                                <p className="text-xl mb-5">
+                                {userData.experience.isCurrent ? "Currently Studying" : (
+                                    userData.experience.endDate.toLocaleString("default", {
+                                    month: "short",
+                                    year: "numeric",
+                                    })
+                                )}
+                                </p>
+                            </div>
+                        </div>
+                        )}
+                    </div>
+                    {userData.experience.description && <div>
+                        <h3 className="font-semibold text-xl">EXPERIENCE DESCRIPTION</h3>
+                        <p className="break-words max-w-sm">{userData.experience.description}</p>
+                    </div>}
                 </div>
             </div>
         </div>

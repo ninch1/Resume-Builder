@@ -24,7 +24,9 @@ export default function Home() {
       startDate: null,
       endDate: null,
       isCurrent: false,
+      description: "",
     },
+
     experience:
     {
       company: "",
@@ -32,6 +34,7 @@ export default function Home() {
       startDate: null,
       endDate: null,
       isCurrent: false,
+      description: "",
     },
   });
 
